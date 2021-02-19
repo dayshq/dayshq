@@ -1,15 +1,10 @@
 <template>
     <div class="go-social">
         <p>Go Social</p>
-        <form>
-            <label>Get your ID</label>
-            <input type="text">
-            <label>Verification</label>
-            <select>
-                <option>Phone Number</option>
-            </select>
-            <button>Submit</button>
-        </form>
+        <div class="info">
+            <p>Instant Messaging with Direct messaging and Groups</p>
+            <p>Create a page to follow topics</p>
+        </div>
     </div>
 </template>
 
@@ -22,36 +17,16 @@ export default class GoSocial extends Vue {}
 
 <style scoped lang="scss">
     .go-social {
-        background: sandybrown;
-        width:500px;
-        height:500px;
+        background: whitesmoke;
+        width:800px;
+        height:46.5vw;
+        text-align: center;
+        vertical-align: center;
         p {
+            padding-top: 100px;
             font-size:36px;
             padding:20px;
         }
-        form {
-            display:flex;
-            flex-direction: column;
-            padding: 15px;
-            font-size: 24px;
-            @mixin inpt {
-                border:1px solid lightgrey;
-                border-radius:5px;
-                margin-top: 10px;
-                height:24px;
-            }
-            input[type="text"] {
-                @include inpt;
-            }
-            select {
-                @include inpt;
-            }
-
-            button {
-                @include inpt
-            }
-        }
-        padding:0px;
     }
 
     p{

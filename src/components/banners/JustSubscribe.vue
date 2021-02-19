@@ -1,10 +1,10 @@
 <template>
     <div class="just-subscribe">
-        <p>Just Subscribe</p>
+        <p>Lets Start</p>
         <form>
             <label>Type your Email</label>
             <input type="text">
-            <button>Start Following</button>
+            <button>Start</button>
         </form>
     </div>
 </template>
@@ -18,9 +18,9 @@ export default class JustSubscribe extends Vue {}
 
 <style scoped lang="scss">
     .just-subscribe {
-        background: olivedrab;
-        width:500px;
-        height:500px;
+        background: lightslategrey;
+        width:800px;
+        height:46.5vw;
         p {
             font-size:36px;
             padding:20px;
@@ -38,6 +38,7 @@ export default class JustSubscribe extends Vue {}
             }
             input[type="text"] {
                 @include inpt;
+                height:30px;
             }
             select {
                 @include inpt;
@@ -45,6 +46,7 @@ export default class JustSubscribe extends Vue {}
 
             button {
                 @include inpt
+                height: 45px;
             }
         }
         padding:0px;

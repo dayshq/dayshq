@@ -16,4 +16,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.btn {
+    background: ghostwhite;
+    font-size: 22px;
+    border: 1px solid lightgrey;
+    border-radius:5px;
+}
 </style>
