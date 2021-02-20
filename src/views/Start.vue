@@ -28,5 +28,6 @@ export default class Home extends Vue {}
   .start {
     display: flex;
     flex-direction: row;
+    background: white;
   }
 </style>

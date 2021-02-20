@@ -17,19 +17,17 @@ export default class GoSocial extends Vue {}
 
 <style scoped lang="scss">
     .go-social {
-        background: whitesmoke;
         width:800px;
         height:46.5vw;
         text-align: center;
         vertical-align: center;
-        p {
-            padding-top: 100px;
-            font-size:36px;
+        padding-top: 100px;
+        .info {
             padding:20px;
         }
     }
-
-    p{
+    p {
+        font-size:36px;
         margin: 0px;
     }
 </style>

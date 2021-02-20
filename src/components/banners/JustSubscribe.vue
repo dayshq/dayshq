@@ -1,10 +1,10 @@
 <template>
-    <div class="just-subscribe">
+    <div class="form just-subscribe">
         <p>Lets Start</p>
         <form>
             <label>Type your Email</label>
-            <input type="text">
-            <button>Start</button>
+            <input type="text" v-model="email">
+            <button type="button" v-on:click="signIn">Start</button>
         </form>
     </div>
 </template>
@@ -13,14 +13,20 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class JustSubscribe extends Vue {}
+export default class JustSubscribe extends Vue {
+  email = '';
+
+  signIn(event: any) {
+    console.log(`${this.email} email`);
+    this.$router.push('verify');
+  }
+}
 </script>
 
 <style scoped lang="scss">
     .just-subscribe {
-        background: lightslategrey;
-        width:800px;
-        height:46.5vw;
+        margin: 15px;
+        margin-top: 40px;
         p {
             font-size:36px;
             padding:20px;

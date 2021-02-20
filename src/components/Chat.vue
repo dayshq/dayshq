@@ -25,7 +25,7 @@ export default class Feed extends Vue {}
     .chat {
         background: whitesmoke;
         width: 60vw;
-        height: 45vw;
+        height: 400px;
         position: relative;
         .messages {
           overflow-y:scroll;

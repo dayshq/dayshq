@@ -1,13 +1,13 @@
 <template>
   <nav class="titlenav">
     <p>DaysHQ</p>
-    <div class="search">
+    <div v-if="this.signedIn" class="search">
       <input type="search" placeholder="search here">
     </div>
-    <div class="author-info">
-            <img width="30" height="30" id="avatar">
-            <p class="author">Krishna</p>
-      </div>
+    <div v-if="this.signedIn" class="author-info">
+            <img :src="avatar" width="30" height="30" id="avatar">
+            <p class="author">{{ currentUserName }}</p>
+    </div>
   </nav>
 </template>
 
@@ -17,6 +17,18 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class TitleNav extends Vue {
   @Prop() private msg!: string;
+
+  get signedIn() {
+    return this.$store.state.user.signedIn;
+  }
+
+  get avatar() {
+    return this.$store.state.user.currentUser.avatar;
+  }
+
+  get currentUserName() {
+    return this.$store.state.user.currentUser.username;
+  }
 }
 </script>
 
